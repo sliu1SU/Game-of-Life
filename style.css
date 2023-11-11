@@ -1,0 +1,120 @@
+td {
+    width: 20px;
+    height: 20px;
+    border: 1px solid black;
+}
+
+#error-msg {
+    color: red;
+    background-color: azure;
+    /* some attribute (usually text-related) can be inherited by descendents
+    children can choose to overwrite it
+    EX:
+    ul {
+        font-weight: bold
+
+    }
+
+    ul li:first-child {
+        font-weight: normal
+        font-style: italic
+    }
+
+    .stop_listing li:first-child {
+        font-weight: normal
+        font-style: italic
+    }
+    */
+    font-weight: bold;
+    font-family: Calibri, sans-serif;
+    /*font size can be %*/
+    font-size: 48px;
+    /*letter spacing is different in phone,
+    can do %,
+    len (cm),
+    pixel(px),
+    % of view port (4vw)*/
+    letter-spacing: 2px;
+}
+
+/*making hover effect on text
+this is only useful for pc, with a mouse */
+#error-msg:hover {
+    background-color: red;
+    color: lightgray;
+}
+
+
+/*all links*/
+a {
+    color: blue;
+}
+
+/*links hover effect*/
+a:hover {
+    color: blue;
+}
+
+/*links that have been visited before*/
+a:visited {
+    color: blue;
+}
+
+/*you can write all types of a tag at once!*/
+a, a:hover, a:visited {
+    color: blue;
+}
+
+/*indent the first line of every para by 4 'm' letters*/
+p::first-line {
+    margin-left: 4em;
+}
+
+/*class you will put . in front of it; in react, to specify class,
+you need to use "className"
+EX: .error {
+    color: red;
+    background-color: green;
+}
+*/
+/*
+5 selector type:
+- # means id
+- . means class
+- no symbol means tag name
+- : means pseudo-class button:active, li:first-child
+- :: means pseudo-element, "imaginary" elements that go around region
+
+specificity (x, y, z)
+x = number of ids
+y = number of classes and pseudo-classes
+z = tag names and pseudo-elements (ex: div, ul, li...)
+
+sorting breakers - these things make the browser ignore specificity
+- an attribute with !important
+- inline style <div style=".... or myElement.style.blah
+*/
+
+/*
+6 combinator types:
+- , means OR - each thing separated by a comma is an idependent selector
+- (space) means ancestor-descendent
+- > means direct parent
+- no separator - apply to the same element, this is AND statement;
+EX: div.a.b.c:last-child {}
+or div.a.b.c:not(last-child) {}
+- + means a later sibling (rarely used)
+- ~ means next sibling (rarely used)
+*/
+
+/*this will only select list items directly inside an ul, NOT grandchildren
+ <ul>
+    <li> <- this one
+        <ol>
+            <li> <- not this one
+        <ol>
+    <li>
+ */
+ul > li {
+
+}

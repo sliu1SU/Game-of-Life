@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Conway's Game of Life</title>
+<!--    include css file here-->
+    <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+    <h1>Conway's Game of Life</h1>
+
+    <section id="buttons">
+        <button id="start-bt" onclick="startGame()">Start</button>
+        <button id="pause-bt" onclick="pauseGame()">Pause</button>
+    </section>
+
+    <section id="game-board-dimension">
+        <label>
+            width (# of columns):
+            <input id="width-input" type="number" name="width" />
+        </label>
+        <label>
+            height (# of rows):
+            <input id="height-input" type="number" name="height" />
+        </label>
+        <button id="submit-bt-change-dimension" onclick="changeGridDimension()">Submit</button>
+    </section>
+
+    <section id="error-msg"></section>
+
+    <section class="game_board">
+        <table id="grid">
+<!--            filling stuff here with js file-->
+        </table>
+    </section>
+<!--this is where you run the script to exe all the logic-->
+    <script src="support.js"></script>
+</body>
+</html>
